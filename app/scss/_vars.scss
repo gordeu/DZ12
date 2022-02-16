@@ -1,0 +1,78 @@
+$green-hover: #4D810C;
+$green-900: #63A60F;
+$green-200: #E0EDCF;
+$green-100: #EFF6E7;
+$dark-900: #121212;
+$dark-800: #31352B;
+$dark-500: #505050;
+$red-900: #CF3E3B;
+$orange-900: #FF7A00;
+$yellow-900: #FFB800;
+$silver-600: #C1C1C1;
+$silver-100: #F6F6F6;
+$white: #ffffff;
+$rim: #EBEBEB;
+$black: #000000;
+
+%opensans-300 {
+  font-family: 'OpenSans-Light';
+  font-weight: 300;
+}
+
+%opensans-400 {
+  font-family: 'OpenSans-Regular';
+  font-weight: 400;
+}
+
+%opensans-600 {
+  font-family: 'OpenSans-SemiBold';
+  font-weight: 600;
+}
+
+%opensans-700 {
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;
+}
+
+%ruda-400 {
+  font-family: 'Ruda-Regular';
+  font-weight: 400;
+}
+
+%ruda-600 {
+  font-family: 'Ruda-SemiBold';
+  font-weight: 600;
+}
+
+%ruda-700 {
+  font-family: 'Ruda-Bold';
+  font-weight: 700;
+}
+
+%ruda-900 {
+  font-family: 'Ruda-Black';
+  font-weight: 900;
+}
+
+%btn {
+  color: $white;
+  background-color: $green-900;
+  border-radius: 6px;
+  transition-duration: 0.3s;
+  transition-property: background-color, box-shadow, color;
+
+  &:hover {
+    background-color: $green-hover;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px $green-200;
+  }
+  
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
