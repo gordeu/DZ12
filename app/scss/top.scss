@@ -48,184 +48,6 @@
     margin-bottom: 50px;
   }
 
-  .product-card {
-    width: 300px;
-    height: 409px;
-    border: 1px solid rgba(17, 17, 17, 0.2);
-    border-radius: 6px;
-
-    &__top {
-      display: flex;
-      justify-content: space-between;
-      height: 45px;
-      padding: 11px;
-      margin-bottom: 11px;
-    }
-
-    &__green,
-    &__orange,
-    &__red {
-      position: relative;
-      display: none;
-      width: fit-content;
-      height: fit-content;
-      margin-bottom: 6px;
-      padding: 3px 6px;
-      @extend %opensans-700;
-      font-size: 10px;
-      line-height: 1;
-      color: $white;
-      background-color: $green-900;
-      text-transform: uppercase;
-      z-index: 1;
-    }
-
-    &__orange {
-      background-color: $orange-900;
-    }
-
-    &__red {
-      background-color: $red-900;
-    }
-
-    &__green--activ,
-    &__orange--activ,
-    &__red--activ {
-      display: block;
-    }
-
-    &__favorite-btn {
-      margin-right: -5px;
-      margin-top: -3px;
-      padding: 22px ;
-      width: 32px;
-      height: 29px;
-      background-image: url(../images/sprite.svg#icon-heart);
-      filter: invert(10%) sepia(2%) saturate(0%) hue-rotate(10deg) brightness(85%) contrast(94%);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 32px;
-      z-index: 1;
-      transition-duration: 0.3s;
-      transition-property: filter;
-
-      &:hover {
-        filter: invert(26%) sepia(79%) saturate(2108%) hue-rotate(359deg) brightness(101%) contrast(105%);
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 3px $green-200;
-        border-radius: 3px;
-      }
-
-      &:active {
-        filter: invert(34%) sepia(80%) saturate(917%) hue-rotate(358deg) brightness(101%) contrast(108%);
-        opacity: 0.5;
-      }      
-    }
-
-    &__body {
-      position: relative;
-      margin-bottom: 18px;
-      width: 298px;
-      height: 215px;
-
-      &:hover::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 205px;
-        background-color: $black;
-        opacity: 0.1;
-      }
-    }
-
-    &__search {
-      position: absolute;
-      top: 39%;
-      left: 42%;
-      width: 48px;
-      height: 48px;
-      background-image: url(../images/icons-decor/icon-search-green.svg);
-      background-color: $white;
-      border-radius: 50%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 20px;
-      opacity: 0;
-      transition-duration: 0.3s;
-      transition-property: opacity;
-    }
-
-    &__body:hover .product-card__search {
-      opacity: 1;
-    }
-
-    &__img {
-      margin-bottom: 17px;
-      height: 215px;
-    }
-
-    &__inner {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 101px;
-      padding: 0 18px 0 19px;
-    }
-
-    &__bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &__name {
-      margin-left: -3px;
-    }
-
-    &__price {
-      @extend %opensans-400;
-      line-height: 1;
-      color: $dark-500;
-    }
-
-    &__old-price {
-      position: relative;
-      height: 18px;
-      @extend %opensans-400;
-      line-height: 1;
-      color: $silver-600;
-      opacity: 0;
-
-      &:before {
-    	content: "";
-    	border-bottom: 1px solid $silver-600;
-    	position: absolute;
-      width: 100%;
-    	height: 50%;
-    	transform: rotate(-14.99deg);
-      opacity: 0;
-      }
-
-      &--activ,
-      &--activ:before {
-        opacity: 1;
-      }
-    }
-
-    &__cart {
-      @extend %btn;
-      width: 32px;
-      height: 32px;
-      background-image: url(../images/sprite.svg#icon-cart); 
-      border-radius: 3px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 15px;
-    }
-  }
-
   &__btn {
     @extend %btn;
     display: block;
@@ -256,3 +78,199 @@
   }
 }
 
+.product-card {
+  width: 300px;
+  height: 409px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    padding: 11px;
+    margin-bottom: 11px;
+  }
+
+  &__green,
+  &__orange,
+  &__red {
+    position: relative;
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 6px;
+    padding: 3px 6px;
+    @extend %opensans-700;
+    font-size: 10px;
+    line-height: 1;
+    color: $white;
+    background-color: $green-900;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  &__orange {
+    background-color: $orange-900;
+  }
+
+  &__red {
+    background-color: $red-900;
+  }
+
+  &__green--activ,
+  &__orange--activ,
+  &__red--activ {
+    display: block;
+  }
+
+  &__favorite-btn {
+    position: relative;
+    margin-right: -5px;
+    margin-top: -3px;
+    padding: 22px ;
+    width: 32px;
+    height: 29px;
+    z-index: 1;
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 7px;
+      width: 32px;
+      height: 29px;
+      background-image: url(../images/sprite.svg#icon-heart);
+      filter: invert(25%) sepia(2%) saturate(9%) hue-rotate(318deg) brightness(103%) contrast(95%);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      transition-duration: 0.3s;
+      transition-property: filter;
+    }
+
+    &:hover::after {
+      filter: invert(26%) sepia(79%) saturate(2108%) hue-rotate(359deg) brightness(101%) contrast(105%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:active::after {
+      filter: invert(34%) sepia(80%) saturate(917%) hue-rotate(358deg) brightness(101%) contrast(108%);
+      opacity: 0.5;
+    }      
+  }
+
+  &__body {
+    position: relative;
+    margin-bottom: 18px;
+    width: 298px;
+    height: 215px;
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 205px;
+      background-color: $black;
+      opacity: 0.1;
+    }
+  }
+
+  &__search {
+    position: absolute;
+    top: 39%;
+    left: 42%;
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/icons-decor/icon-search-green.svg);
+    background-color: $white;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+  }
+
+  &__body:hover .product-card__search {
+    opacity: 1;
+  }
+
+  &__img {
+    margin-bottom: 17px;
+    height: 215px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 101px;
+    padding: 0 18px 0 19px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+    margin-left: -3px;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__price {
+    @extend %opensans-400;
+    line-height: 1;
+    color: $dark-500;
+  }
+
+  &__old-price {
+    position: relative;
+    height: 18px;
+    @extend %opensans-400;
+    line-height: 1;
+    color: $silver-600;
+    opacity: 0;
+
+    &:before {
+  	content: "";
+  	border-bottom: 1px solid $silver-600;
+  	position: absolute;
+    width: 100%;
+  	height: 50%;
+  	transform: rotate(-14.99deg);
+    opacity: 0;
+    }
+
+    &--activ,
+    &--activ:before {
+      opacity: 1;
+    }
+  }
+  
+  &__cart {
+    @extend %btn;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/sprite.svg#icon-cart); 
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px;
+  }
+}

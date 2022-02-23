@@ -59,40 +59,7 @@
 .slick-prev {
   position: absolute;
   top: 50%;
-  right: 50px;
-  transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
-  border-radius: 6px;
-  background-color: $white;
-  opacity: 0.8;
-  font-size: 0;
-  z-index: 1;
-  background-repeat: no-repeat;
-  background-position: center center;
-  transition-duration: 0.3s;
-  transition-property: background-color, opacity, box-shadow, filter, color;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    right: 21px;
-    width: 20px;
-    height: 32px;
-    background-image: url(../images/icons/icon-arrow-right.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    transition-duration: 0.3s;
-    transition-property: transform;
-  }
-}
-
-.slick-next {
-  position: absolute;
-  top: 50%;
-  left: 50px;
+  left: 115px;
   transform: translateY(-50%);
   width: 60px;
   height: 60px;
@@ -114,6 +81,39 @@
     width: 20px;
     height: 32px;
     background-image: url(../images/icons/icon-arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: 115px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: $white;
+  opacity: 0.8;
+  font-size: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition-duration: 0.3s;
+  transition-property: background-color, opacity, box-shadow, filter, color;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 21px;
+    width: 20px;
+    height: 32px;
+    background-image: url(../images/icons/icon-arrow-right.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -149,6 +149,14 @@
 }
 
 .slick-disabled:after  {
-  filter: invert(83%) sepia(1%) saturate(0%) hue-rotate(46deg) brightness(94%) contrast(92%);
+  filter: invert(82%) sepia(2%) saturate(11%) hue-rotate(312deg) brightness(94%) contrast(93%);
   transform: rotate(-180deg);
+}
+
+.slick-disabled:hover {
+  background-color: $white;
+}
+
+.slick-disabled:focus {
+  box-shadow: none;
 }
