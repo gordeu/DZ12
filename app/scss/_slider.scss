@@ -21,14 +21,6 @@
     justify-content: space-between;    
     background: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
-
-    & p {
-      margin-bottom: 35px;
-      @extend %opensans-400;
-      font-size: 16px;
-      letter-spacing: 0.0005em;
-      color: $dark-500;
-    }
   }
 
   &__title,
@@ -45,6 +37,14 @@
   &__subtitle {
     margin-bottom: 6px;
     color: $red-900;
+  }
+
+  &__add {
+    @extend %opensans-400;
+    color: $dark-500;
+    margin-bottom: 35px;
+    font-size: 16px;
+    letter-spacing: 0.0005em;
   }
 
   &__btn {

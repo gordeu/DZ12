@@ -4,7 +4,7 @@ $(function () {
     infinite: false
   }); 
 
-  var mixer = mixitup('.top__product-cards');
+  var mixer = mixitup('.product-cards');
 
 });
 

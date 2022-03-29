@@ -1,11 +1,11 @@
 .header {
   &__top {
-    padding-top: 21px;
-    padding-bottom: 15px;
     @extend %opensans-700;
-    font-size: 13px;
     color: $white;
     background-color: $dark-800;
+    padding-top: 21px;
+    padding-bottom: 15px;
+    font-size: 13px;
   }
 
   &__upper,
